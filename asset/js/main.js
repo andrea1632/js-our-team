@@ -44,7 +44,7 @@ for (i = 0; i <= team.length; i++){
     }
     container.innerHTML += `
         
-        <div class="card col-4 m-3" style="width: 18rem;">
+        <div class="card col-3 mx-2 my-4">
             <img src="./asset/img/${team[i]['photo']}" class="card-img-top" alt="pic of ${team[i]['name']}">
                 <div class="card-body">
                     <h5 class="card-title text-center">${team[i]['nome']}</h5>
