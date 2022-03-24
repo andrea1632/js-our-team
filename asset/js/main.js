@@ -39,11 +39,12 @@ var team =
 ];
 //ciclo for per ciclare l'array team
 for (i = 0; i <= team.length; i++){
-    console.log(team[i])
     for (var key in team[i]) {
-        container.innerHTML += `
+        console.log(`${key}: ${team[i][key]}`)        
+    }
+    container.innerHTML += `
         
-        <div class="card col" style="width: 18rem;">
+        <div class="card col-4 m-3" style="width: 18rem;">
             <img src="./asset/img/${team[i]['photo']}" class="card-img-top" alt="pic of ${team[i]['name']}">
                 <div class="card-body">
                     <h5 class="card-title text-center">${team[i]['nome']}</h5>
@@ -52,6 +53,5 @@ for (i = 0; i <= team.length; i++){
         </div>
 
         `
-    }
 }
 console.log(team[0]['photo'])
