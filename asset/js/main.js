@@ -1,3 +1,4 @@
+let container = document.getElementById("contenitore");
 var team = 
 [
     {
@@ -9,7 +10,7 @@ var team =
     {
         'nome' : 'Angela Carroll',
         'ruolo' : 'Chief Editor',
-        'photo' : 'angela-carroll-chief-editor.jpg'
+        'photo' : 'angela-caroll-chief-editor.jpg'
     },
 
     {
@@ -35,4 +36,22 @@ var team =
         'ruolo' : 'Graphic Designer',
         'photo' : 'barbara-ramos-graphic-designer.jpg'
     }
-]
+];
+//ciclo for per ciclare l'array team
+for (i = 0; i <= team.length; i++){
+    console.log(team[i])
+    for (var key in team[i]) {
+        container.innerHTML += `
+        
+        <div class="card col" style="width: 18rem;">
+            <img src="./asset/img/${team[i]['photo']}" class="card-img-top" alt="pic of ${team[i]['name']}">
+                <div class="card-body">
+                    <h5 class="card-title text-center">${team[i]['nome']}</h5>
+                    <p class="card-text text-center">${team[i]['ruolo']}</p>
+                </div>
+        </div>
+
+        `
+    }
+}
+console.log(team[0]['photo'])
